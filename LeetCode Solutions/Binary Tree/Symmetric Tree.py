@@ -8,14 +8,14 @@ class Solution:
     def isSymmetric(self, root: TreeNode) -> bool:
         if(not root):
             return True
-        def isMirror(p,q) -> bool:
+        def isSymmetric(p,q) -> bool:
             if(not p and not q):
                 return True
             if((p and not q) or (not p and q) or (p.val != q.val)):
                 return False
-            if(not isMirror(p.left, q.right)):
+            if(not isSymmetric(p.left, q.right)):
                 return False
-            if(not isMirror(p.right, q.left)):
+            if(not isSymmetric(p.right, q.left)):
                 return False
             return True
-        return isMirror(root.left, root.right)
+        return isSymmetric(root.left, root.right)

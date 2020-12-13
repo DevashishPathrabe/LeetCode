@@ -1,9 +1,5 @@
-class Solution(object):
-    def isHappy(self, n):
-        """
-        :type n: int
-        :rtype: bool
-        """
+class Solution:
+    def isHappy(self, n: int) -> bool:
         i=0
         while(n!=1 and i<50):
             x=0

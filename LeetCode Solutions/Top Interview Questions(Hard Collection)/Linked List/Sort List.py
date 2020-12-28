@@ -9,7 +9,7 @@ class Solution:
             return None
         newList=[]
         current = head
-        head2 = current
+        head1 = current
         while(head):
             newList.append(head.val)
             head = head.next
@@ -19,5 +19,4 @@ class Solution:
             current.val = newList[i]
             current = current.next
             i+=1
-        return head2
-        
+        return head1

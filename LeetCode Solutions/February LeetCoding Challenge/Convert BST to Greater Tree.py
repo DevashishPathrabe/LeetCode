@@ -11,7 +11,6 @@ class Solution:
             return None
         if(root.right):
             self.convertBST(root.right)
-            
         self.total += root.val;
         root.val = self.total
         if(root.left):

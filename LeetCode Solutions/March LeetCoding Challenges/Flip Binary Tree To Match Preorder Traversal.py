@@ -22,7 +22,7 @@ class Solution:
                     helper(node.left, voyage, listOfValues)
                     helper(node.right, voyage, listOfValues)
         helper(root, voyage, listOfValues)
-        if listOfValues[0] == -1:
+        if(listOfValues[0] == -1):
             return listOfValues[:1]
         else:
             return listOfValues[1:]

@@ -14,9 +14,9 @@ class Solution {
         int value = matrix[y][x];
         memo[y][x] = 1 + Math.max(
             Math.max(y < matrix.length - 1 && matrix[y+1][x] < value ? helper(y+1, x, matrix, memo) : 0,
-                     y > 0 && matrix[y-1][x] < value ? helper(y-1, x, matrix, memo) : 0),
+                    y > 0 && matrix[y-1][x] < value ? helper(y-1, x, matrix, memo) : 0),
             Math.max(x < matrix[0].length - 1 && matrix[y][x+1] < value ? helper(y, x+1, matrix, memo) : 0,
-                     x > 0 && matrix[y][x-1] < value ? helper(y, x-1, matrix, memo) : 0));
+                    x > 0 && matrix[y][x-1] < value ? helper(y, x-1, matrix, memo) : 0));
         return memo[y][x];
     }
 }

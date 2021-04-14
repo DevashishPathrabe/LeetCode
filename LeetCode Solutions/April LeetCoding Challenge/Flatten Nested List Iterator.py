@@ -31,6 +31,7 @@ class NestedIterator:
                 self.data.append(i.getInteger())
             else:
                 self.flatten(i.getList())
+                
     def next(self) -> int:
         return self.data.pop(0)
     

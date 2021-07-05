@@ -17,12 +17,12 @@ public:
         }
         return isSymmetric(root,root);
     }
-    bool isSymmetric(TreeNode* a, TreeNode* b){
-        if(a == NULL && b == NULL){
+    bool isSymmetric(TreeNode* p, TreeNode* q){
+        if(p == NULL && q == NULL){
             return true;
         }
-        if(a != NULL && b != NULL && a->val == b->val){
-            return isSymmetric(a->left, b->right) && isSymmetric(a->right, b->left);
+        if(p != NULL && q != NULL && p->val == q->val){
+            return isSymmetric(p->left, q->right) && isSymmetric(p->right, q->left);
         }
         return false;
     }

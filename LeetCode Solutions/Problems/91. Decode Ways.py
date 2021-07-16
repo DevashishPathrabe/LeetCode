@@ -11,8 +11,8 @@ class Solution:
             numberOfWays = 0
             if(s[i] != '0'):
                 numberOfWays = l   
-            two_digit = int(s[i - 1: i + 1])
-            if(two_digit >= 10 and two_digit <= 26):
+            twoDigit = int(s[i - 1: i + 1])
+            if(twoDigit >= 10 and twoDigit <= 26):
                 numberOfWays += sl
             sl, l = l, numberOfWays
         return numberOfWays

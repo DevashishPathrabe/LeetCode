@@ -1,0 +1,3 @@
+class Solution:
+    def checkOverlap(self, radius: int, xCenter: int, yCenter: int, x1: int, y1: int, x2: int, y2: int) -> bool:
+        return ((x1 <= xCenter <= x2 and y1 <= yCenter + radius and yCenter - radius <= y2) or (y1 <= yCenter <= y2 and x1 <= xCenter + radius and xCenter - radius <= x2) or min(pow(pow(x1 - xCenter, 2) + pow(y1 - yCenter, 2), 0.5), pow(pow(x1 - xCenter, 2) + pow(y2 - yCenter, 2), 0.5), pow(pow(x2 - xCenter, 2) + pow(y1 - yCenter, 2), 0.5), pow(pow(x2 - xCenter, 2) + pow(y2 - yCenter, 2), 0.5)) < radius)

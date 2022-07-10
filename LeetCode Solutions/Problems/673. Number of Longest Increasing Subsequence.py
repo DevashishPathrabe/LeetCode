@@ -1,0 +1,20 @@
+class Solution:
+    def findNumberOfLIS(self, nums: List[int]) -> int:
+        if(not nums):
+            return 0
+        longest = [1] * len(nums)
+        number = [1] * len(nums)
+        for i in range(1, len(nums)):
+            for j in range(i):
+                if(nums[i] > nums[j]):
+                    if(longest[j] + 1 > longest[i]):
+                        longest[i] = longest[j] + 1
+                        number[i] = number[j]
+                    elif(longest[j] + 1 == longest[i]):
+                        number[i] += number[j]
+        longestSub = max(longest)
+        numberOfLongestIncreasingSubsequences = 0
+        for num in range(len(number)):
+            if(longest[num] == longestSub):
+                numberOfLongestIncreasingSubsequences+=number[num]
+        return numberOfLongestIncreasingSubsequences

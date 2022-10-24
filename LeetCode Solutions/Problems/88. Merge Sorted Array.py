@@ -3,7 +3,5 @@ class Solution:
         """
         Do not return anything, modify nums1 in-place instead.
         """
-        for i in range(0, n):
-            nums1[m] = nums2[i]
-            m += 1
-        return nums1.sort()
+        nums1[m:] = nums2
+        nums1.sort()

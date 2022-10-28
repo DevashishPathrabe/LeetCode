@@ -1,9 +1,9 @@
 class Solution:
     def thousandSeparator(self, n: int) -> str:
-        a = ""
+        string = ""
         for n in format(n,",d"):
-            if(n == ","):
-                a += "."
+            if n == ",":
+                string += "."
             else:
-                a += n
-        return a
+                string += n
+        return string

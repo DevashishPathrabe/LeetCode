@@ -7,5 +7,5 @@ class Solution:
             ans = list1.index(i) + list2.index(i)
             l[i] = ans
             answer = min(l.values())
-            result = (j for j, k in l.items() if(k == answer))
-        return(result)
+            result = (j for j, k in l.items() if k == answer)
+        return result

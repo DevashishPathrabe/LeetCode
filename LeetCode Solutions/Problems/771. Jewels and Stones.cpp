@@ -1,9 +1,9 @@
 class Solution {
 public:
-    int numJewelsInStones(string J, string S) {
+    int numJewelsInStones(string jewels, string stones) {
         int result = 0;
-        for(int i=0; i<S.length(); i++){
-            if(J.find(S[i])<J.length()){
+        for (int i=0; i<stones.length(); i++){
+            if (jewels.find(stones[i]) < jewels.length()){
                 result++;
             }
         }

@@ -1,7 +1,7 @@
 class Solution:
-    def numJewelsInStones(self, J: str, S: str) -> int:
+    def numJewelsInStones(self, jewels: str, stones: str) -> int:
         result = 0
-        for i in S:
-            if(i in J):
-                result = result+1
+        for i in stones:
+            if i in jewels:
+                result += 1
         return result

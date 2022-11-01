@@ -1,8 +1,8 @@
 class Solution {
-    public int numJewelsInStones(String J, String S) {
+    public int numJewelsInStones(String jewels, String stones) {
         int result = 0;
-        for(int i=0; i<S.length(); i++){
-            if(J.indexOf(S.charAt(i)) != -1){
+        for (int i=0; i<stones.length(); i++){
+            if (jewels.indexOf(stones.charAt(i)) != -1){
                 result++;
             }
         }
